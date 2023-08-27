@@ -7,9 +7,9 @@ e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 
-#e.insert(0, "")
+# e.insert(0, "")
 def button_click(number):
-    #e.delete(0, END)
+    # e.delete(0, END)
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
@@ -18,11 +18,13 @@ def button_click(number):
 def button_clear():
     e.delete(0, END)
 
+
 def button_add():
-   first_number = e.get()
-   global f_num
-   f_num = int(first_number)
-   e.delete(0, END)
+    first_number = e.get()
+    global f_num
+    f_num = int(first_number)
+    e.delete(0, END)
+
 
 def button_equal():
     second_number = e.get()
@@ -47,7 +49,6 @@ button_add = Button(root, text="+", padx=39, pady=20, command=button_add)
 button_equal = Button(root, text="=", padx=91, pady=20, command=button_equal)
 button_clear = Button(root, text="Clear", padx=79, pady=20, command=button_clear)
 
-
 # put the bottons on the screen
 
 button_1.grid(row=3, column=0)
@@ -66,6 +67,5 @@ button_0.grid(row=4, column=0)
 button_clear.grid(row=4, column=1, columnspan=2)
 button_add.grid(row=5, column=0)
 button_equal.grid(row=5, column=1, columnspan=2)
-
 
 root.mainloop()
